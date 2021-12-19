@@ -30,5 +30,6 @@ public class User implements Serializable {
     @TableField(fill = FieldFill.INSERT)  //创建时插入版本号
     private Integer version;   //添加乐观锁
     @TableLogic   //0表示未删除,1表示删除
+    @TableField(fill = FieldFill.INSERT)  //创建时插入默认0未删除
     private Integer deleted;  //逻辑删除
 }
